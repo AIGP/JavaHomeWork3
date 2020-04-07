@@ -16,7 +16,7 @@ public class Box<T extends Fruit> {
     public String getItemClass(){
         return this.arr.getClass().getName();
     }
-    public void moveToOtherBox(Box<T> box){
+    public void moveToOtherBox(Box<? super T> box){
         if(this.getItemClass().equals(box.getItemClass())){
             for (T i: this.arr) {
                 box.addFruit(i);
